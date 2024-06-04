@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise with solutions</title>
+</head>
+<script>
+    document.write("2-) Write a JavaScript program to print the current window contents.<br>");
+    document.write("show in console");
+    function print_current_page()
+{
+window.print();
+}
+document.write("<br><br><br>")
+document.write("3-) Write a JavaScript program to get the current date.  .<br>");
+document.write("show in console");
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; 
+var yyyy = today.getFullYear();
+if(dd<10) 
+{
+    dd='0'+dd;
+} 
+if(mm<10) 
+{
+    mm='0'+mm;
+} 
+today = mm+'-'+dd+'-'+yyyy;
+console.log(today);
+today = mm+'/'+dd+'/'+yyyy;
+console.log(today);
+today = dd+'-'+mm+'-'+yyyy;
+console.log(today);
+today = dd+'/'+mm+'/'+yyyy;
+console.log(today);
+
+document.write("<br><br><br>")
+document.write("4-)  Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7  .<br>");
+document.write("show in console");
+var side1 = 5; 
+var side2 = 6; 
+var side3 = 7; 
+var s = (side1 + side2 + side3) / 2;
+var area = Math.sqrt(s * ((s - side1) * (s - side2) * (s - side3)));
+console.log(area);
+document.write("<br><br><br>")
+
+</script>
+<body>
+    <p></p>
+    <p>Click the button to print the current page.</p>
+    <button onclick="print_current_page()">Print this page</button>  <br> <br><br><br>
+
+   
+</body>
+</html>

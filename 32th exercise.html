@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js exercises</title>
+</head>
+<script>
+    document.write("<br><br><br>")
+document.write("32-) Write a JavaScript program to find the closest value to 100 from two numerical values.<br>");
+document.write("show in console<br><br>");
+console.log("32-)------Program exercise-----------------");
+function near_100(x, y) {
+  if (x != y)
+  {
+  x1 = Math.abs(x - 100);
+  y1 = Math.abs(y - 100);
+
+  if (x1 < y1)
+  {
+    return x;
+  }
+  if (y1 < x1)
+  {
+    return y;
+  }
+  return 0;
+  }
+  else
+    return false;
+}
+console.log(near_100(90, 89));
+console.log(near_100(-90, -89));
+console.log(near_100(90, 90));
+document.write("<br><br><br>")
+document.write("35-) Write a JavaScript program to find the closest value to 100 from two numerical values.<br>");
+document.write("show in console<br><br>");
+console.log("35-)------Program exercise-----------------");
+function check_char(str1, char)
+ {
+  ctr = 0;
+  for (let i = 0; i < str1.length; i++)
+  {
+    if ((str1.charAt(i) == char) && (i >= 1 && i <= 3))
+    {
+        ctr=1;
+        break;
+    }
+   }
+   if (ctr==1) return true;
+   return false;
+}
+console.log(check_char("Python", "y"));
+console.log(check_char("JavaScript", "a"));
+console.log(check_char("Console", "o"));
+console.log(check_char("Console", "C"));
+console.log(check_char("Console", "e"));
+console.log(check_char("JavaScript", "S"));
+document.write("<br><br><br>")
+document.write("37-) Write a JavaScript program to produce a new string that has the first 3 characters in lower case from a given string. If the string length is less than 3 convert all the characters to upper case.<br>");
+document.write("show in console<br><br>");
+console.log("37-)------Program exercise-----------------");
+function upper_lower(str) {
+  if (str.length <= 3) {
+    return str.toUpperCase();
+  }
+  front_part = (str.substring(0, 3)).toLowerCase();
+  back_part = str.substring(3, str.length);  
+  return front_part + back_part;
+}
+console.log(upper_lower("Python"));
+console.log(upper_lower("Py"));
+console.log(upper_lower("JAVAScript"));
+document.write("<br><br><br>")
+document.write("42-) Write a JavaScript program to check whether three given numbers are increasing in strict or in soft mode<br>Note: Strict mode -> 10, 15, 31  Soft mode -> 24, 22, 31 or 22, 22, 31.<br>");
+document.write("show in console<br><br>");
+console.log("42-)------Program exercise-----------------");
+function number_order(x, y, z ) {
+  if ( y > x && z > y) 
+  {
+    return "strict mode";    
+  }
+  else if(z > y) 
+   return "Soft mode";
+  else
+    return "Undefinded";
+}
+console.log(number_order(10,15,31));
+console.log(number_order(24,22,31));
+console.log(number_order(50,21,15));
+</script>
+<body>
+</body>
+</html>

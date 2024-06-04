@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercises sol</title>
+</head>
+<script>
+    document.write("6-) Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.<br>");
+document.write("show in console");
+function leapyear(year)
+{
+return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
+}
+console.log(leapyear(2016));
+console.log(leapyear(2000));
+console.log(leapyear(1700));
+console.log(leapyear(1800));
+console.log(leapyear(100));
+document.write("<br><br><br>")
+document.write("7-) Write a JavaScript program to find out if 1st January will be a Sunday between 2014 and 2050.<br>");
+document.write("show in console");
+for(var year=2014;year<= 2050;year++){
+    var d=new Date(year,0,1);
+    if(d.getDate ===0)
+console.log("1st January is being a Sunday"+year);
+}
+document.write("<br><br><br>")
+document.write("8-) Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number. The program displays a message Good Work if the input matches the guess number otherwise Not matched.<br>");
+document.write("show in console");
+console.log("8-)------Program exercise-----------------");
+const num=Math.ceil(Math.random()*10);
+console.log(num);
+const gnum=prompt("Guess the number between 1 and 10 ");
+if(gnum == num)
+console.log("Matched");
+else
+console.log('Not matched, the number was '+gnum);
+document.write("<br><br><br>")
+document.write("9-) Write a JavaScript program to calculate the days left before Christmas.<br>");
+document.write("show in console");
+console.log("9-)------Program exercise-----------------");
+today=new Date();
+var cmas=new Date(today.getFullYear(), 11, 25);
+if (today.getMonth()==11 && today.getDate()>25) 
+{
+cmas.setFullYear(cmas.getFullYear()+1); 
+}  
+var one_day=1000*60*60*24;
+console.log(Math.ceil((cmas.getTime()-today.getTime())/(one_day))+
+" days left until Christmas!");
+</script>
+<body>
+</body>
+</html>
